@@ -8,7 +8,7 @@ function validateFields() {
 }
 
 function isEmailValid() {
-    const email = document.getElementById("email").value;
+    const email = form.email().value;
     if (!email) {
         return false;
     }
@@ -16,13 +16,19 @@ function isEmailValid() {
 }
 
 function isPasswordValid() {
-    const password = document.getElementById("password").value;
+    const password = form.password().value;
     if (!password) {
         return false;
+    }else{
+        return true;
     }
-    return true;
 }
 
 function validateEmail(email) {
     return /\S+@\S+\.\S+/.test(email);
+}
+
+const form = {
+    email: () => document.getElementById("email"),
+    password: () => document.getElementById("password")
 }

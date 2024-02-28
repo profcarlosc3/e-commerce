@@ -7,23 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="exemplo.html">
+    <form>
         <div>
-            <label>Digite seu email:</label>
-            <input id="email" type="email" name="email" placeholder="seu@email" onchange="validateFields()">
+            <div><label>Digite seu Email</label></div>
+            <input type="email" name="email" id="email" placeholder="seu@email.com" onchange="validateFields()"/>
+        <div>
+            <div><label>Digite sua Senha</label></div>
+            <input type="password" name="password" id="password" placeholder="Senha" onchange="validateFields()"/>
         </div>
         <div>
-            <label>Digite sua senha:</label>
-            <input id="password" type="password" name="password" onchange="validateFields()">
+            <button type="button" class="solid" id="login-button" disabled="true">Entrar</button>
         </div>
         <div>
-            <button id="login-button" class="solid" type="button" disabled>Entrar</button>
+            <button type="button" class="clear" id="recover-password-button" disabled="true">Recuperar senha</button>
         </div>
         <div>
-            <button id="recover-password-button" class="clear" type="button" disabled>Recuperar Senha</button>
-        </div>
-        <div>
-            <button class="line" type="button" disabled>Cadastrar</button>
+            <button type="button" class="outline">Cadastrar</button>
         </div>
     </form>
     <script src="index.js"> </script>
