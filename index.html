@@ -10,21 +10,22 @@
     <form action="exemplo.html">
         <div>
             <label>Digite seu email:</label>
-            <input type="email" name="email" placeholder="seu@email">
+            <input id="email" type="email" name="email" placeholder="seu@email" onchange="validateFields()">
         </div>
         <div>
             <label>Digite sua senha:</label>
-            <input type="password" name="password">
+            <input id="password" type="password" name="password" onchange="validateFields()">
         </div>
         <div>
-            <button class="solid" type="button" onclick="alert('Login bem sucedido!')">Entrar</button>
+            <button id="login-button" class="solid" type="button" disabled>Entrar</button>
         </div>
         <div>
-            <button class="clear" type="button">Recuperar Senha</button>
+            <button id="recover-password-button" class="clear" type="button" disabled>Recuperar Senha</button>
         </div>
         <div>
-            <button class="line" type="button">Cadastrar</button>
+            <button class="line" type="button" disabled>Cadastrar</button>
         </div>
     </form>
+    <script src="index.js"> </script>
 </body>
 </html>
