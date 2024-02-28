@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="">
+        <div>
+            <div>
+                <label>Digite seu email: </label>
+                <input type="email" name="email" id="email" 
+                placeholder="seu@email.com" onchange="validateFilds()">
+            </div>
+            <div>
+                <label>Digite sua senha: </label>
+                <input type="password" name="password" id="password" 
+                placeholder="Senha" onchange="validateFilds()">
+            </div>
+            <div>
+                <button type="button" id="login-button"
+                class="solid" disabled="true">Entrar</button>
+            </div>
+            <div>
+                <button type="button" id="recover-password-button"
+                class="clear" disabled="true">Lembrar Senha</button>
+            </div>
+            <div>
+                <button type="button" class="outline" disabled="true">Cadastrar</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

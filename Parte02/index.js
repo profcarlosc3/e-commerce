@@ -34,7 +34,20 @@ const form = {
 }
 
 function login(){
-    window.location.href = "index.html";
+    firebase.auth().signInWithEmailAndPassword(
+        form.email().value, form.password().value
+    ).then(response => {
+        window.location.href = "index.html";
+    }).catch(error => {
+        alert(getErrorMessage(error));
+    });
+}
+
+function getErrorMessage(error) {
+    if (error.code == "auth/user-not-found") {
+        return "Usuário nao encontrado";
+    }
+    return error.message;
 }
 
 function registrar(){
